@@ -148,12 +148,27 @@ export const scenes: Scene[] = [
     id: 'facebookNo',
     text: 'He doesn’t do more than like the post, but she’s definitely on his mind. Keep going.',
     choices: [
+      { text: 'Continue', nextSceneId: 'biketrack' },
+    ],
+  },
+  {
+    id: 'biketrack',
+    text: "It's the start of junior year, and Soohyun decides to stop by the bike track on her way home. The sun has set, and only a few other bikers are there. Among them are Manuel and Nishant, who catch up to her after a few laps to say hello. Nishant rides off to talk to some other bikers, but Manuel hangs back to ride with Soo. They chat for a little while, as they cruise around the track, talking about work and their summers and other things two acquaintances talk about. Time flies, and Soo realizes she really enjoyed biking with Manuel. Should she ask him out?",
+    choices: [
+      { text: 'Yes', nextSceneId: 'end' },
+      { text: 'No', nextSceneId: 'biketrackNo' },
+    ],
+  },
+  {
+    id: 'biketrackNo',
+    text: "She doesn't really know this guy well, so she bikes home. Keep going.",
+    choices: [
       { text: 'Continue', nextSceneId: 'pineapples' },
     ],
   },
   {
     id: 'pineapples',
-    text: 'Manuel is chasing a runaway pineapple as Soohyun wonders how they ended up here. She sent a message to the Rice Bikes Slack about the fall semester crawl, adding an open invite to bike out to HEB for party supplies. Manuel saw this as his chance to not only spend time with Soo but also to take the shop tricycle on a joy ride. Plus, the adult-sized trike has a rear basket perfect for transporting the pineapples he needs for his pina coladas. However, pineapples are suprisingly aerodynamic, and they have to make frequent stops for Manuel to rescue his pineapples when they fly out of the basket. Soo thinks Manuel’s a little crazy but admires his quirkiness and determination. Should she ask him out?',
+    text: 'Manuel is chasing a runaway pineapple as Soohyun wonders how they ended up here. She sent a message to the Rice Bikes Slack about the fall semester crawl, adding an open invite to bike out to HEB for party supplies. Manuel saw this as his chance to not only spend time with Soo but also to take the shop tricycle on a joy ride. Plus, the adult-sized trike has a rear basket perfect for transporting the pineapple he needs for his pina coladas. However, pineapples are suprisingly aerodynamic, and they have to make frequent stops for Manuel to rescue his pineapple whenever it flies out of the basket. Soo thinks Manuel’s a little crazy but admires his quirkiness and determination. Should she ask him out?',
     choices: [
       { text: 'Yes', nextSceneId: 'end' },
       { text: 'No', nextSceneId: 'pineapplesNo' },
@@ -161,7 +176,7 @@ export const scenes: Scene[] = [
   },
   {
     id: 'pineapplesNo',
-    text: 'Soohyun, Manuel, and all the pineapples make it back to Rice in one piece. They split to get ready for the party that night. Keep going.',
+    text: 'Soohyun, Manuel, and the pineapple make it back to Rice in one piece. They split to get ready for the party that night. Keep going.',
     choices: [
       { text: 'Continue', nextSceneId: 'crawl' },
     ],

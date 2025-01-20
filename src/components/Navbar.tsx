@@ -17,7 +17,7 @@ function NavBar({ navItems }: NavBarProps) {
 
   return (
     <>
-    <h1>Soohyun and Jose Manuel</h1>
+    <h1>S + JM</h1>
     <nav className="navbar navbar-expand-md navbar-light bg-white">
       <div className="container-fluid">
         <button
