@@ -15,11 +15,14 @@ function App() {
 
   let items = ["Home","Our Story", "Travel", "RSVP", "Play Game"];
 
+  const basename = import.meta.env.BASE_URL || '/sjm_wedding_website';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <NavBar navItems={items} />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/our-story" element={<OurStory />} />
           <Route path="/travel" element={<Travel />} />
