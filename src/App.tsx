@@ -16,10 +16,11 @@ function App() {
   let items = ["Home","Our Story", "Travel", "RSVP", "Play Game"];
 
   return (
-    <Router>
+    <Router basename="/sjm_wedding_website">
       <div className="App">
         <NavBar navItems={items} />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/our-story" element={<OurStory />} />
           <Route path="/travel" element={<Travel />} />
