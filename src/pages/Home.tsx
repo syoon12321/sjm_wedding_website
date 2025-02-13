@@ -5,16 +5,16 @@ const Home: React.FC = () => {
     return (
       <div className="home-page">
         <header>
-          <h1>Soohyun Yoon</h1>
-          <h1>&</h1>
-          <h1>Jose Manuel Pacheco Luna</h1>
-          <h1>invite you to their wedding</h1>
+          <h3>Soohyun Yoon</h3>
+          <h3>&</h3>
+          <h3>Jose Manuel Pacheco Luna</h3>
+          <h3>invite you to their wedding</h3>
         </header>
         <main>
           <section>
-            <h3>September 21, 2025</h3>
-            <h3>The Skylight Chapel</h3>
-            <h3>Upstate South Carolina</h3>
+            <p>September 21, 2025</p>
+            <p>The Skylight Chapel</p>
+            <p>Upstate South Carolina</p>
           </section>
         </main>
       </div>

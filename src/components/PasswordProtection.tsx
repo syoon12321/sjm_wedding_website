@@ -10,7 +10,7 @@ const PasswordProtection = () => {
   
   useEffect(() => {
     // Check if already authenticated
-    const isAuthenticated = localStorage.getItem('weddingAuthenticated');
+    const isAuthenticated = sessionStorage.getItem('weddingAuthenticated');
     if (isAuthenticated === 'true') {
       navigate('/home');
     }

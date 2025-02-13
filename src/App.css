@@ -5,6 +5,7 @@
   text-align: center;
   margin: 20px;
   position: relative; /* To position the buttons container absolutely within the app container */
+  background-color: #abc9de; /* Light blue background */
 }
 
 h1 {
