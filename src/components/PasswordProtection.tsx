@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 const PasswordProtection = () => {
   const [password, setPassword] = useState('');
@@ -8,18 +8,18 @@ const PasswordProtection = () => {
 
   const CORRECT_PASSWORD = 'bananas'; // Change this to your desired password
   
-  useEffect(() => {
-    // Check if already authenticated
-    const isAuthenticated = sessionStorage.getItem('weddingAuthenticated');
-    if (isAuthenticated === 'true') {
-      navigate('/home');
-    }
-  }, [navigate]);
+  const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
+
+  // If already authenticated, redirect to home
+  if (isAuthenticated) {
+    return <Navigate to="/home" replace />;
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (password === CORRECT_PASSWORD) {
-      localStorage.setItem('weddingAuthenticated', 'true');
+      sessionStorage.setItem('isAuthenticated', 'true');
+      console.log('Setting auth status to true');
       navigate('/home');
     } else {
       setError('Incorrect password. Please try again.');
@@ -40,6 +40,8 @@ const PasswordProtection = () => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div>
             <input
+              id="password-input"
+              name="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
