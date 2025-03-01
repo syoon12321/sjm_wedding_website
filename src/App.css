@@ -27,8 +27,8 @@ p {
   text-align: center;
   font-size: 18px;
   margin: 200px;
-  padding-top: 50px;
-  padding-bottom: 60px; /* Add padding to avoid text being obscured by fixed buttons */
+  padding-top: 10px;
+  padding-bottom: 10px; /* Add padding to avoid text being obscured by fixed buttons */
 }
 
 /* Centering the navbar links */
