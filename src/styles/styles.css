@@ -1,6 +1,6 @@
 /* Base styles */
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Arial', san-serif;
     color: #333;
     background-color: #f8f8f8;
     margin: 0;
@@ -39,7 +39,7 @@ body {
   .main-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #507558;
+    color: #333;
   }
 
   h2.breaks {
@@ -47,10 +47,40 @@ body {
     text-align: center; /* Center align if needed */
   }
   
+  .main-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #316a3a;
+  }
   .main-section p {
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: #666;
     line-height: 1.6;
+  }
+
+  /* Navbar list styling */
+  .navbar ul {
+    list-style-type: none !important; /* Remove bullets from navbar */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Keep navbar items horizontal */
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    margin: 0 15px; /* Horizontal spacing between nav items */
+  }
+
+  /* If you're using Bootstrap's navbar classes, you might need this instead: */
+  .navbar-nav {
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    margin: 0 15px;
   }
   
   /* Button styles */
