@@ -1,90 +1,114 @@
 /* Base styles */
 body {
-    font-family: 'Arial', san-serif;
+    font-family: 'Open Sans', san-serif;
     color: #333;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-  }
-  
-  a {
+    min-height: 100vh; /* Ensures the background covers the full viewport height */
+}
+
+/* If you have a root or app container, also set its background */
+#root, 
+.App {
+    background-color: #fffefc !important;
+    min-height: 100vh;
+}
+
+.open-sans-normal {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+a {
     color: #b37e7a;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
-  /* Header */
-  header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e1e1e1;
-    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #fffefc;
+    border-bottom: 1px solid #fffefc;
+    padding: 10px 0;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
+    font-family: "Open Sans", sans-serif;
     font-size: 2.5em;
     margin: 0;
     color: #333;
-  }
-  
-  /* Main section */
-  .main-section {
-    padding: 40px 20px;
+}
+
+/* Main section */
+.main-section {
+    padding: 40px 90px;
     text-align: center;
-  }
-  
-  .main-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-  }
+}
 
-  h2.breaks {
-    line-height: 1.5em; /* Adjust line height for spacing */
-    text-align: center; /* Center align if needed */
-  }
-  
-  .main-section h3 {
+.main-section h2 {
+    font-family: "Open Sans", sans-serif;
     font-size: 2em;
-    margin-bottom: 20px;
+    color: #554300;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.main-section h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
     color: #316a3a;
-  }
-  .main-section p {
-    font-size: 1.0em;
-    color: #666;
-    line-height: 1.6;
-  }
+}
 
-  /* Navbar list styling */
-  .navbar ul {
+.main-section h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    color: #000000;
+    line-height: 1.5em;
+}
+
+.main-section p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    color: #554300;
+    margin: 0 5rem;
+    line-height: 1.5;
+}
+
+/* Navbar list styling */
+.navbar ul {
     list-style-type: none !important; /* Remove bullets from navbar */
     padding: 0;
     margin: 0;
     display: flex; /* Keep navbar items horizontal */
-  }
+}
 
-  .navbar ul li {
+.navbar ul li {
     display: inline-block;
     margin: 0 15px; /* Horizontal spacing between nav items */
-  }
+}
 
-  /* If you're using Bootstrap's navbar classes, you might need this instead: */
-  .navbar-nav {
+/* If you're using Bootstrap's navbar classes, you might need this instead: */
+.navbar-nav {
     list-style-type: none !important;
     padding: 0;
     margin: 0;
-  }
+}
 
-  .navbar-nav .nav-item {
+.navbar-nav .nav-item {
     display: inline-block;
     margin: 0 15px;
-  }
-  
-  /* Button styles */
-  .button {
+}
+
+/* Button styles */
+.button {
     display: inline-block;
     background-color: #b37e7a;
     color: #ffffff;
@@ -94,43 +118,55 @@ body {
     font-size: 1em;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #9b6c63;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #ffffff;
-    border-top: 1px solid #e1e1e1;
+}
+
+/* Footer */
+footer {
+    background-color: #fffefc;
     padding: 20px 0;
     text-align: center;
-  }
-  
-  footer p {
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+.footer-content p {
+    font-size: 0.5em;
+    color: #939292;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     header h1 {
-      font-size: 2em;
+        font-size: 2em;
     }
-  
+
     .main-section h2 {
-      font-size: 1.5em;
+        font-size: 1.5em;
     }
-  
+
     .main-section p {
-      font-size: 1em;
+        font-size: 1em;
     }
-  }
-  
-  /* Photos */
-  .engagement-photo {
-    max-width: 100%;
+}
+
+/* Photos */
+.engagement-photo {
+    max-width: 70%;
     height: auto;
     margin: 2rem 0;
+}
+
+.countdown {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
+    color: #554300;
+    text-align: center;
+    background-color: transparent;
+}
+
+.countdown-item {
+    display: inline-block;
 }

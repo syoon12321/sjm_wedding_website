@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 
-const PasswordProtection = () => {
+const PasswordProtection: React.FC = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
-  const CORRECT_PASSWORD = 'bananas'; // Change this to your desired password
   
+  // Add error handling for undefined env variable
+  const CORRECT_PASSWORD = 'bananas';
+
   const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
 
   // If already authenticated, redirect to home
