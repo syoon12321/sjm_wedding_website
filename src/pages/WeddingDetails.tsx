@@ -1,47 +1,99 @@
 // src/pages/BigDay.tsx
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
+import gazebo from '../assets/clipart_gazebo.png';
+import birdy from '../assets/clipart_birdy.png';
+import butterfly from '../assets/clipart_butterfly.png';
+import church from '../assets/clipart_church.png';
+import tree from '../assets/clipart_tree.png';
 
 const WeddingDetails: React.FC = () => {
+  const { language } = useLanguage();
+  const t = translations[language as keyof typeof translations].weddingDetails;
+
   return (
     <div className="main-section">
       <main>
-        <h3>The Big Day</h3>
-        <h4>Sunday, September 21, 2025</h4>
-        <p>2:00 PM Guests start to arrive, photos</p>
-        <p>3:00 PM First Look</p>
-        <p>3:30 PM Ceremony and Vows</p>
-        <p>4:00 PM Reception</p>
-        <p>9:00 PM Party winds down</p>
+        <h2>{t.title}</h2>
+        <img 
+          src={gazebo} 
+          alt="pretty-art" 
+          className='map-photo'
+        />
 
-        <h4>Getting to the Venue</h4>
-        <p>The Skylight Chapel</p>
-        <p>605 Groce Meadow Road</p>
-        <p>Taylors, South Carolina 29687</p>
-        <br></br>
-        <p>Plenty of parking is available at the venue. We will NOT be providing a shuttle to and from the venue, so please plan accordingly and reach out to us BEFORE the wedding if you need help finding a ride.</p>
+        <h3>{t.date}</h3>
+        <p>{t.underConstruction}</p>
+        <img 
+          src={tree} 
+          alt="pretty-art" 
+          className='map-photo'
+        />
 
-        <h4>Point of Contact</h4>
-        <p>Kayla, our wonderful day-of wedding coordinator can help you!</p>
-        <p>Phone number: ###-###-####</p>
+        <h3>{t.venue.title}</h3>
+        <p>{t.venue.name}</p>
+        <p>{t.venue.address}</p>
+        <p>{t.venue.city}</p>
+        <br />
+        <p>{t.venue.parking}</p>
+        <br />
+
+        <h3>{t.contact.title}</h3>
+        <p>{t.contact.name}</p>
+        <p>{t.contact.phone}</p>
+        <br />
+
+        <h3>{t.expectations.title}</h3>
+        <p>{t.expectations.description}</p>
+                
+        <img 
+          src={butterfly} 
+          alt="pretty-art" 
+          className='map-photo'
+        />
+
+        <h2>{t.faq.title}</h2>
+
+        <h4>{t.faq.dressCode.question}</h4>
+        <p>{t.faq.dressCode.answer}</p>
+        <br />
+
+        <h4>{t.faq.openBar.question}</h4>
+        <p>{t.faq.openBar.answer}</p>
+        <br />
+
+        <h4>{t.faq.photos.question}</h4>
+        <p>{t.faq.photos.answer}</p>
         
-        <h4>What to expect</h4>
-        <p>We will have a short and sweet outdoor ceremony (weather permitting) and a reception indoors. Come ready to enjoy tacos, beverages, fruit, a selection of our favorite snacks, and cake. We'll also be dancing and playing party games, so wear something comfortable!</p>
-        <p>RSVP by August 31, 2025</p>
+        <img 
+          src={birdy} 
+          alt="pretty-art" 
+          className='map-photo'
+        />
 
-        <h4>Attire Recommendations</h4>
-        <p>Please wear something nice for our wedding photos. Brownie points if you pull off a disco theme.</p>
+        <h2>{t.plans.title}</h2>
+        <p>{t.plans.description}</p>
+        <br />
 
-        <h3>Plans Leading Up to the Wedding</h3>
-        <h4>Saturday</h4>
-        <p>Nuptial Mass & Church Ceremony at St. Paul the Apostle Catholic Church</p>
+        <h4>{t.plans.saturday.title}</h4>
+        <p>{t.plans.saturday.event}</p>
+        <img 
+          src={church} 
+          alt="pretty-art" 
+          className='map-photo'
+        />
 
-        <h4>Friday</h4>
-        <p>Tour of BMW Manufacturing</p>
-        <p>Dinner in Greenville</p>
-        <h4>Thursday</h4>
-        <p>Day at Lake Jocassee</p>
-        <h4>Before Thursday</h4>
-        <p></p>
+        <h4>{t.plans.friday.title}</h4>
+        <p>{t.plans.friday.events[0]}</p>
+        <p>{t.plans.friday.events[1]}</p>
+        <br />
+
+        <h4>{t.plans.thursday.title}</h4>
+        <p>{t.plans.thursday.event}</p>
+        <br />
+
+        <h4>{t.plans.before.title}</h4>
+        <p>{t.plans.before.event}</p>
 
       </main>
     </div>

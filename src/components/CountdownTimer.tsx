@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations/translations';
+import { translations } from '../translations';
 
 export const CountdownTimer = () => {
     const { language, setLanguage } = useLanguage();

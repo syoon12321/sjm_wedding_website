@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations/translations';
+import { translations } from '../translations';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2025 Soohyun Yoon and Manuel Pacheco</p>
-        <p>This website has been approved by Hoonho Shin</p>
+        <h6>© 2025 Soohyun Yoon and Manuel Pacheco</h6>
+        <h6>This website has been approved by Hoonho Shin</h6>
       </div>
     </footer>
   );

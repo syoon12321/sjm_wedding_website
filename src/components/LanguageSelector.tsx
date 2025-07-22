@@ -26,7 +26,8 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           backgroundColor: 'transparent',
           color: '#554300',
           cursor: 'pointer',
-          fontFamily: 'Open Sauce, sans-serif',
+          fontFamily: 'Single Day, cursive',
+          borderRadius: '5px',
         }}
       >
         <option value="en">English</option>

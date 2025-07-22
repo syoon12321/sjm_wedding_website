@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PasswordProtection from './components/PasswordProtection';
 import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/Navbar';
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import Home from './pages/Home';
 import Travel from './pages/Travel';
 import WeddingDetails from './pages/WeddingDetails';
@@ -15,7 +15,7 @@ import RSVP from './pages/RSVP';
 import PlayGame from './pages/PlayGame';
 import Footer from './components/Footer';
 
-const App: React.FC = () => {
+const App: React.FC = () => {  
   return (
     <LanguageProvider>
       <Router basename="/sjm_wedding_website">

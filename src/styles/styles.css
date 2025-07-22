@@ -23,14 +23,18 @@ body {
       "wdth" 100;
 }
 
-a {
-    color: #b37e7a;
-    text-decoration: none;
+.single-day-regular {
+font-family: "Single Day", cursive;
+font-weight: 400;
+font-style: normal;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+.noto-serif-kr{
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 /* Header */
 header {
@@ -40,46 +44,90 @@ header {
     text-align: center;
 }
 
-header h1 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 2.5em;
-    margin: 0;
-    color: #333;
-}
-
 /* Main section */
 .main-section {
-    padding: 40px 90px;
+    padding: 30px 90px;
     text-align: center;
 }
 
-.main-section h2 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 2em;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .main-section h2 {
+        font-size: 1.5em;
+    }
+
+    .main-section p {
+        font-size: 1em;
+    }
+
+    .main-section {
+        margin: 10px auto;  /* Increased margins for web mode */
+        padding: 10px;      /* Increased padding for web mode */
+    }
+}
+
+.main-section h1 {
+    font-family: "Single Day", cursive;
+    font-size: 3em;
     color: #554300;
-    margin: 5px 0;
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+.main-section h2 {
+    font-family: "Single Day", cursive;
+    font-size: 2.5em;
+    color: #030c1b;
     line-height: 1.5;
 }
 
 .main-section h3 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5em;
-    color: #316a3a;
+    color: #1f447c;
+    line-height: 1.5;
+
+}
+
+.main-section h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    color: #080700;
+    line-height: 1.5em;
+}
+
+.main-section h5 {
+    font-family: "Single Day", cursive;
+    font-size: 1.5em;
+    color: #080700;
+    line-height: 1.5em;
 }
 
 .main-section h6 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Single Day", cursive;
     font-size: 1em;
-    color: #000000;
+    color: #554300;
     line-height: 1.5em;
 }
 
 .main-section p {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
-    color: #554300;
+    color: #080700;
     margin: 0 5rem;
     line-height: 1.5;
+}
+
+.main-section a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    color: #1f447c;
+    margin: 0 5rem;
+    line-height: 1.5;
+    text-align: center;
 }
 
 /* Navbar list styling */
@@ -102,26 +150,10 @@ header h1 {
     margin: 0;
 }
 
-.navbar-nav .nav-item {
+.navbar-nav .nav-item a {
     display: inline-block;
+    color: #080700;
     margin: 0 15px;
-}
-
-/* Button styles */
-.button {
-    display: inline-block;
-    background-color: #b37e7a;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #9b6c63;
 }
 
 /* Footer */
@@ -131,25 +163,10 @@ footer {
     text-align: center;
 }
 
-.footer-content p {
+.footer-content h6 {
+    font-family: "Single Day", cursive;
     font-size: 0.5em;
     color: #939292;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    .main-section h2 {
-        font-size: 1.5em;
-    }
-
-    .main-section p {
-        font-size: 1em;
-    }
 }
 
 /* Photos */
@@ -159,10 +176,99 @@ footer {
     margin: 2rem 0;
 }
 
+.map-photo {
+    max-width: 70%;
+    height: auto;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .travel-photo {
+    flex: 0 0 28%; /* lock width to about 28% of row */
+    background: white;
+    padding: 10px 10px 45px 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(137, 135, 135, 0.3);
+    transition: transform 0.2s ease;
+    max-width: 100%;
+  }
+  
+  .travel-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: auto;
+  }
+  
+  .travel-photo.left {
+    transform: rotate(-3deg);
+  }
+  
+  .travel-photo.right {
+    transform: rotate(3deg);
+  }
+  
+  .photo-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.spacer {
+width: 280px;
+height: 50px;
+}
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .photo-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+      align-items: center;    /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+  
+    .travel-photo {
+      width: 60%;
+      max-width: 400px;
+    }
+  }
+  
+
 .countdown {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.9em;
-    color: #554300;
+    font-family: "Single Day", cursive;
+    font-size: 1.5em;
+    color: #54453e;
     text-align: center;
     background-color: transparent;
 }
@@ -170,3 +276,65 @@ footer {
 .countdown-item {
     display: inline-block;
 }
+
+.game-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for buttons */
+.buttons-container {
+    bottom: 20px;
+    padding-inline-end: 3%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Add space between buttons */
+  }
+  
+  /* Style each list item */
+  li {
+    margin: 10px 0;
+  }
+  
+  /* Style buttons within list items */
+  button {
+    background-color: #4c54af; /* Green background */
+    font-family: "Single Day", cursive;
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block display */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #3c428b; /* Darker green on hover */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .button:hover {
+    background-color: #e8e8e8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }  

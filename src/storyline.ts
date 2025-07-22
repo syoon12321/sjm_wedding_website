@@ -41,7 +41,7 @@ export const scenes: Scene[] = [
   },
   {
     id: 'riceBikes',
-    text: 'Soohyun is working a shift at Rice Bikes with Anthony and Louis. A customer walks in with a very bent bike wheel. Apparently, he rode into the fountain by the business school (sober) and needs a new wheel. Wheel standard are really confusing, and while it’s clear they’ll need to order a wheel, no one really knows what they’re doing (they end up ordering the wrong wheel). Anthony and Louis are friends with the customer, Manuel, and they’re all joking around. Soo lies Manuel’s good humor. Should she ask him out?',
+    text: 'Soohyun is working a shift at Rice Bikes with Anthony and Louis. A customer walks in with a very bent bike wheel. Apparently, he rode into the fountain by the business school (sober) and needs a new wheel. Wheel standard are really confusing, and while it’s clear they’ll need to order a wheel, no one really knows what they’re doing (they end up ordering the wrong wheel). Anthony and Louis are friends with the customer, Manuel, and they’re all joking around. Soo likes Manuel’s good humor. Should she ask him out?',
     choices: [
       { text: 'Yes', nextSceneId: 'end' },
       { text: 'No', nextSceneId: 'riceBikesNo' },
@@ -94,7 +94,7 @@ export const scenes: Scene[] = [
   },
   {
     id: 'hackathonNo',
-    text: 'Nonetheless, they exchange phone numbers in case Manuel has any more questions. She’s saved as “Soo Rice Bikes” on his phone, and he’s saved as “Manuel Pancheto” on hers due to an unfortunate case of spell-it-like-it-sounds. Keep going.',
+    text: "Nonetheless, they exchange phone numbers in case Manuel has any more questions. Soohyun accidentally saves his number as as 'Manuel Pancheto,' and Manuel doesn't even save Soohyun's number. Oh well. Keep going.",
     choices: [
       { text: 'Continue', nextSceneId: 'jobInterview' },
     ],
@@ -191,9 +191,8 @@ export const scenes: Scene[] = [
   },
   {
     id: 'end',
-    text: 'Soohyun and Manuel agree to start off slow by going on a bike ride to Buffalo Bayou together. They go on one bike ride, and then another, and the rest is history. Over the next few years, life takes them on a wild ride with many ups and downs, but they stick together. Then, on 04/14/24, they found themselves back at Buffalo Bayou. Manuel had an album full of memories, a letter he wrote, and a ring. He asked Soo another ambitious question. “Will you marry me?” And Soo said, “Yes!”',
+    text: 'Soohyun and Manuel agree to start off slow by going on a bike ride to Buffalo Bayou together. They go on one bike ride, and then another, and the rest is history. Over the next few years, life takes them on a wild ride with many ups and downs, but they stick together. Then, on 04/14/24, they found themselves back at Buffalo Bayou. Manuel had an album full of memories, a letter he wrote, and a beautiful ring. He asked Soo another ambitious question. “Will you marry me?” And Soo said, “Yes!”',
     choices: [
-      { text: 'RSVP', nextSceneId: 'RSVP' },
       { text: 'Play again', nextSceneId: 'start' },
     ],
   },

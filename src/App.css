@@ -1,4 +1,5 @@
 /* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 
 /* General styling for the app container */
 .App {
@@ -52,45 +53,3 @@ p {
   line-height: 2.5; /* Adjust according to your design */
 }
 
-/* Container for buttons */
-.buttons-container {
-  position: fixed; /* Fixes the position relative to the viewport */
-  bottom: 20px; /* Space from the bottom of the viewport */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Offset left by 50% of the container width to center it */
-}
-
-ul {
-  list-style-type: none;
-  padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  gap: 10px; /* Add space between buttons */
-}
-
-/* Style each list item */
-li {
-  margin: 10px 0;
-}
-
-/* Style buttons within list items */
-button {
-  background-color: #4c54af; /* Green background */
-  color: white; /* White text color */
-  border: none; /* No border */
-  padding: 10px 20px; /* Padding inside the button */
-  text-align: center; /* Center text inside the button */
-  text-decoration: none; /* No underline */
-  display: inline-block; /* Inline-block display */
-  font-size: 16px; /* Font size */
-  margin: 4px 2px; /* Margin around the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-/* Button hover effect */
-button:hover {
-  background-color: #3c428b; /* Darker green on hover */
-}

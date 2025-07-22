@@ -6,7 +6,7 @@ import headerImage from '../assets/website_header.png';
 import { CountdownTimer } from './CountdownTimer';
 import { LanguageSelector } from './LanguageSelector';
 import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations/translations';
+import { translations } from '../translations';
 
 function NavBar() {
   const { language, setLanguage } = useLanguage();
