@@ -23,7 +23,11 @@ const WeddingDetails: React.FC = () => {
         />
 
         <h3>{t.date}</h3>
-        <p>{t.underConstruction}</p>
+        <img 
+          src={wedding_timeline} 
+          alt="timeline" 
+          className='map-photo'
+        />
         <img 
           src={tree} 
           alt="pretty-art" 
